@@ -10,6 +10,15 @@ public class BallsProblem {
        int blackCount = 0;
        int blueCount = 0;
        int redCount = 0;
+       double totalSum = (blackN*blackW) + (blueN*blueW) + (redN*redW);
+       if(m > totalSum){
+           System.out.println("Invalid m: m value exceeds totalSum of balls");
+           return;
+       }
+       else if(m == 0){
+           System.out.println(redCount+" red, "  + blueCount+" blue, " + blackCount + " black.");
+           return;
+       }
        while(m != 0){
            if(m >= redW && redN > 0){
                redCount++;
